@@ -6,8 +6,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+} from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
 import { Menu, X, Folder, CreditCard } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -22,8 +22,16 @@ const HeaderMenu = () => {
   return (
     <DropdownMenu open={open} onOpenChange={toggleMenu}>
       <DropdownMenuTrigger asChild>
-        <Button onClick={toggleMenu} className="mr-4" variant="secondary">
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <Button
+          onClick={toggleMenu}
+          className="mr-4 bg-zinc-900 hover:bg-zinc-800"
+          variant="secondary"
+        >
+          {open ? (
+            <X className="h-6 w-6 text-white active:text-white" />
+          ) : (
+            <Menu className="h-6 w-6 text-white active:text-white" />
+          )}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

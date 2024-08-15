@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "./ui/dialog";
 import { Plus } from "lucide-react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";

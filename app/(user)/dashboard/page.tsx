@@ -1,4 +1,4 @@
-import NewProject from "@/components/new-project";
+import NewProject from "../../../components/new-project";
 import React from "react";
 
 export default function page() {

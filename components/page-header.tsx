@@ -23,10 +23,10 @@ const PageHeader = () => {
           <div>
             <SignedOut>
               <SignInButton>
-                <Button className="bg-black">Sign In</Button>
+                <Button className="">Sign In</Button>
               </SignInButton>
               <SignUpButton>
-                <Button className="bg-black ml-2">Sign Up</Button>
+                <Button className=" ml-2">Sign Up</Button>
               </SignUpButton>
             </SignedOut>
             <SignedIn>

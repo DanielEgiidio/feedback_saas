@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="bg-zinc-950 text-zinc-50 antialiased">
+        <body className=" antialiased">
           <PageHeader />
           {children}
         </body>

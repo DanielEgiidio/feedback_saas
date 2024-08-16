@@ -3,7 +3,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -12,24 +11,26 @@ import { Plus } from "lucide-react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { createProject } from "../actions/createProject";
+import SubmitProject from "./submit-project";
 
 const NewProjBtn = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="rounded-full">
+        <Button className="rounded-lg">
+          <span className="mr-2">Novo Projeto</span>
           <Plus className="w-4 h-4" />
-          <span className="ml-2">Novo Projeto</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] rounded-md">
+      <DialogContent className="sm:max-w-[425px] rounded-md  border-none shadow-shape">
         <DialogHeader>
           <DialogTitle>Novo Projeto</DialogTitle>
           <DialogDescription>
             Crie um novo projeto para começar
           </DialogDescription>
         </DialogHeader>
-        <form className="flex gap-4 flex-col">
+        <form className="flex gap-4 flex-col" action={createProject}>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label htmlFor="name">Nome</Label>
@@ -48,7 +49,7 @@ const NewProjBtn = () => {
               placeholder="Descrição do projeto (opcional)"
             />
           </div>
-          <Button>Criar</Button>
+          <SubmitProject />
         </form>
       </DialogContent>
     </Dialog>

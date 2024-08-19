@@ -28,7 +28,7 @@ export default function projectsList(props: Props) {
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardFooter>
-              <Link href={`/dashboard/projects/${project.id}`}>
+              <Link href={`/projects/${project.id}`}>
                 <Button>Ver Projeto</Button>
               </Link>
             </CardFooter>
